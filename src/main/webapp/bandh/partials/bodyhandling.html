@@ -1,0 +1,126 @@
+<h2>Body Handling</h2>
+<h3>Teeth Check</h3>
+<table>
+	<tr>
+		<td>
+			<label>Completed</label>
+			<input type="number" ng-model="data.output.bh.teethCompleted" id="teethCompleted" max="30" style="width: 3em" />
+			<label>&nbsp;/&nbsp;Attempted</label>
+			<input type="number" ng-model="data.output.bh.teethAttempted" id="teethAttempted" max="30"	style="width: 3em" />
+		</td>
+		<td>
+			<label>Had to be more assertive?</label>
+			<label class="radiolabel">
+				<input type="radio" ng-model="data.output.bh.teethCheckAssertive" value="true" /> 
+				Yes
+			</label> 
+			<label class="radiolabel">
+				<input type="radio" ng-model="data.output.bh.teethCheckAssertive" value="false" /> 
+				No
+			</label>
+		</td>
+	</tr>
+	<tr>
+		<td><label>Dog's reaction</label>
+			<div isteven-multi-select input-model="data.input.bh.teethcheckbehaviors"
+				output-model="data.output.bh.teethcheckbehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div></td>
+		<td ng-show="form.containsOther(data.output.bh.teethcheckbehaviors)">
+			<label>Other: </label> <input id="teethcheckbehaviorother" ng-model="data.output.bh.teethcheckbehaviorsother"/>
+		</td>
+	</tr>
+</table>
+<h3>Handling</h3>
+<table>
+	<tr>
+		<td>
+			<label>Tail tug</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.tailtug"
+				output-model="data.output.bh.handling.tailtugbehaviors" button-label="name"
+				item-label="name" tick-property="ticked">
+			</div>
+		</td>
+		<td>
+			<label>Ears L</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.earsl"
+				output-model="data.output.bh.handling.earslbehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div>
+		</td>
+		<td>
+			<label>Ears R</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.earsr"
+				output-model="data.output.bh.handling.earsrbehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div>
+		</td>
+		<td>
+			<label>Paws Front L</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.pawsfrontl"
+				output-model="data.output.bh.handling.pawsfrontlbehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div>
+		</td>
+		<td>
+			<label>Paws Front R</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.pawsfrontr"
+				output-model="data.output.bh.handling.pawsfrontrbehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label>Paws Back L</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.pawsbackl"
+				output-model="data.output.bh.handling.pawsbacklbehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div>
+		</td>
+		<td>
+			<label>Paws Back R</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.pawsbackr"
+				output-model="data.output.bh.handling.pawsbackrbehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div>
+		</td>
+		<td>
+			<label>Hug front</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.hugfront"
+				output-model="data.output.bh.handling.hugfrontbehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div>
+		</td>
+		<td>
+			<label>Hug side</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.hugside"
+				output-model="data.output.bh.handling.hugsidebehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div>
+		</td>
+		<td>
+			<label>Pick up</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.pickup"
+				output-model="data.output.bh.handling.pickupbehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label>Eye contact</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.eyecontact"
+				output-model="data.output.bh.handling.eyecontactbehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div>
+		</td>
+		<td>
+			<label>Overall</label>
+			<div isteven-multi-select input-model="data.input.bh.handling.overall"
+				output-model="data.output.bh.handling.overallbehaviors" button-label="name"
+				item-label="name" tick-property="ticked"></div>
+		</td>
+		
+	</tr>
+	<tr ng-show="form.objectContainsOther(data.output.bh.handling)">
+		<td colspan="5">
+			<label>Other: </label>
+			<input id="handlingbehaviorother" ng-model="data.output.bh.handling.handlingother"/>
+		</td>
+	</tr>
+</table>
+<label>Handling comments</label>
+<br />
+<textarea id="handlingBehaviorComments" rows="{{form.commentHeight}}"
+	cols="{{form.commentWidth}}" ng-model="data.output.bh.comments">
+</textarea>

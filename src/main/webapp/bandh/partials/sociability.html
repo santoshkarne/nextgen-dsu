@@ -1,0 +1,90 @@
+<h2>Sociability</h2>
+<h3>Total Score: {{data.output.sociability.ignoreScore + data.output.sociability.engageScore}}</h3>
+<table>
+	<tr>
+		<td><strong>Stand and ignore for 60 seconds:</strong>
+		Score: <input type="number" ng-model="data.output.sociability.ignoreScore" id="ignoreScore" /></td>
+	</tr>
+	<tr>
+		<td>
+			<div isteven-multi-select input-model="data.input.sociability.ignorebehaviors"
+				output-model="data.output.sociability.ignorebehaviors" button-label="name" item-label="name"
+				tick-property="ticked"></div>
+		</td>
+		<td ng-show="form.containsOther(data.output.sociability.ignorebehaviors)" >
+			<label>Other: </label>
+			<input id="ignorebehaviorother" ng-model="data.output.sociability.ignorebehaviorother"/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2"><strong>Three back strokes</strong>
+				<label class="radiolabel"> 
+				<input type="radio" ng-model="data.output.sociability.backstrokes" value="indifferent" /> 
+				Indifferent
+			</label> 
+			<label class="radiolabel"> 
+				<input type="radio" ng-model="data.output.sociability.backstrokes" value="likes" /> 
+				Likes it
+			</label>
+			<label class="radiolabel"> 
+				<input type="radio" ng-model="data.output.sociability.backstrokes" value="loves" /> 
+				Loves it
+			</label>
+			<label class="radiolabel"> 
+				<input type="radio" ng-model="data.output.sociability.backstrokes" value="doesnt" /> 
+				Doesn't like it
+			</label>
+			<label class="radiolabel"> 
+				<input type="radio" ng-model="data.output.sociability.backstrokes" value="scared" /> 
+				Scared
+			</label>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div isteven-multi-select input-model="data.input.sociability.backstrokebehaviors"
+				output-model="data.output.sociability.backstrokebehaviors" button-label="name" item-label="name"
+				tick-property="ticked"></div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2"><strong>Sit on</strong>
+			<label class="radiolabel"> 
+				<input type="radio" ng-model="data.output.sociability.siton" value="chair" /> 
+				Chair
+			</label> 
+			<label class="radiolabel"> 
+				<input type="radio" ng-model="data.output.sociability.siton" value="floor" /> 
+				Floor
+			</label>
+		<strong>Count 5 seconds. Dog came over?</strong>
+			<label class="radiolabel"> 
+				<input type="radio" ng-model="data.output.sociability.cameover" value="yes" /> 
+				Yes
+			</label> 
+			<label class="radiolabel"> 
+				<input type="radio" ng-model="data.output.sociability.cameover" value="no" /> 
+				No
+			</label>
+		</td>
+	</tr>
+	<tr>
+		<td><strong>Call dog over and solicit attention for 20 seconds:</strong>
+		Score: <input type="number" ng-model="data.output.sociability.engageScore" id="engageScore" /></td>
+	</tr>
+	<tr>
+		<td>
+			<div isteven-multi-select input-model="data.input.sociability.engagebehaviors"
+				output-model="data.output.sociability.engagebehaviors" button-label="name" item-label="name"
+				tick-property="ticked"></div>
+		</td>
+		<td ng-show="form.containsOther(data.output.sociability.engagebehaviors)">
+			<label>Other: </label>
+			<input id="engagebehaviorother" ng-model="data.output.sociability.engagebehaviorother"/>
+		</td>
+	</tr>
+</table>
+<label>Sociability comments</label>
+<br />
+<textarea id="sociabilityComments" rows="{{form.commentHeight}}" cols="{{form.commentWidth}}" ng-model="data.output.sociability.comments">
+</textarea>
