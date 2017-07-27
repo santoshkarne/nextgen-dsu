@@ -5,7 +5,7 @@
 	#Define default port
     EXPOSE 80
 	# Copy this repo into place.
-	VOLUME ["/var/www", ""]
+	VOLUME ["/var/www", "src/main/resources/webapp"]
     ENTRYPOINT [ "/usr/sbin/apache2ctl" ]
 	#Define default command
     CMD [ "-D", "FOREGROUND" ]
