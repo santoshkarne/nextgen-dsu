@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+   webserver:
+    build: 
+      context: ./apache
+    image: apache-webserver
+    # mount point for application in tomcat
+    
+    ports:
+      - "80:80" 
+      - "443:443"
+    restart: always
+   appserver:
+    build:
+      context: ./tomcat
+    image: tomcat-appserver
+    
+    ports:
+      - "8080:8080" 
+      - "8000:8000"
+    
+    restart: always
+     
