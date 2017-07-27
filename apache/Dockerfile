@@ -8,5 +8,5 @@
     ENTRYPOINT [ "/usr/sbin/apache2ctl" ]
 	#Define default command
 	ADD target/*.zip /var/www/html/bandh/
-	RUN unzip /var/www/html/bandh/account-balanaces-apache-0.0.1-SNAPSHOT-docs.zip -d /var/www/html/bandh
+	RUN unzip /var/www/html/bandh/bandh-docs.zip -d /var/www/html/bandh
     CMD [ "-D", "FOREGROUND" ]

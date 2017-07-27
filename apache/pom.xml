@@ -11,6 +11,7 @@
 	<url>http://maven.apache.org</url>
 	
 	<build>
+	<finalName>bandh</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
