@@ -3,18 +3,18 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.vanguard.hackathon</groupId>
-		<artifactId>account-balanaces-app</artifactId>
+		<artifactId>account-balances-app</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<groupId>com.vanguard.hackathon</groupId>
-	<artifactId>account-balanaces-tomcat</artifactId>
+	<artifactId>account-balances-tomcat</artifactId>
 	<packaging>war</packaging>
 	<url>http://maven.apache.org</url>
 
 
 	<build>
-		<finalName>account-balanaces-app</finalName>
+		<finalName>account-balances-app</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

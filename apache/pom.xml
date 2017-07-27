@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.vanguard.hackathon</groupId>
-		<artifactId>account-balanaces-app</artifactId>
+		<artifactId>account-balances-app</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.vanguard.hackathon</groupId>
-	<artifactId>account-balanaces-apache</artifactId>
+	<artifactId>account-balances-apache</artifactId>
 	<url>http://maven.apache.org</url>
 	
 	<build>
