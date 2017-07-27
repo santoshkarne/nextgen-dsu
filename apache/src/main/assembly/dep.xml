@@ -7,8 +7,8 @@
   </formats>
   <fileSets>
     <fileSet>
-      <directory>${project.basedir}</directory>
-      <outputDirectory>/docs</outputDirectory>
+      <directory>${project.basedir}/src/main/resources/webapp</directory>
+      <outputDirectory>docs</outputDirectory>
       <includes>
         <include>**/**/*.js</include>
         <include>**/**/*.html</include>
