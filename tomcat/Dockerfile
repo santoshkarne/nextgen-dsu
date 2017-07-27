@@ -1,7 +1,8 @@
-FROM tomcat:8.0
+FROM tomcat:latest
 
-COPY /tomcat.war /usr/local/tomcat/webapps/tomcat.war
+ADD account-balances-app.war /usr/local/tomcat/webapps/
 
-COPY /SimpleJspWebsite.war /usr/local/tomcat/webapps/SimpleJspWebsite.war
+EXPOSE 8080
 
 CMD ["catalina.sh","run"]
+
