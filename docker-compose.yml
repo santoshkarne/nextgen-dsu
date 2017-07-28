@@ -15,7 +15,8 @@ services:
     build:
       context: ./tomcat
     image: tomcat-appserver
-    
+    volumes:
+      - ./tomcat/target/account-balances-app:/usr/local/tomcat/webapps/account-balances-app
     ports:
       - "8080:8080" 
       - "8000:8000"
